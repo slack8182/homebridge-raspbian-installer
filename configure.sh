@@ -68,7 +68,8 @@ choose=$(dialog --title "Homebridge plugins installer" --backtitle "Homebridge c
 1 "Belkin WeMo Platform" \
 2 "Orvibo Smart Socket Platform" \
 3 "TPLink HS100/HS110 WiFi Smart Plug" \
-4 "< Back to prev menu" )
+4 "SONY BRAVIA TV" \
+5 "< Back to prev menu" )
 
 output=$?
 if [[ $output != "" || $output == "" ]]
@@ -82,7 +83,10 @@ then
     elif [[ $choose -eq 3 ]]
     then
         menu_plugin homebridge-hs100
-    else
+    elif [[ $choose -eq 4]]
+    then
+         menu_plugin homebridge-sonybraviatv
+     else
         menu_main
     fi
 else
