@@ -34,8 +34,8 @@ fi
 
 function menu_configure()
 {
-choose=$(dialog --title "/var/homebridge/config.json" --backtitle "Homebridge configuration tool by @macnow - Configuration Editor" \
---stdout --ok-label Save --editbox /var/homebridge/config.json $((LINES-10)) $((COLS-5)) )
+choose=$(dialog --title "/home/pi/.homebridge/config.json" --backtitle "Homebridge configuration tool by @macnow - Configuration Editor" \
+--stdout --ok-label Save --editbox /home/pi/.homebridge/config.json $((LINES-10)) $((COLS-5)) )
 output=$?
 if [[ $output != "" || $output == "" ]]
 then
@@ -45,8 +45,8 @@ then
         json_output=$?
 	if [[ $json_output -eq 0 ]]
         then
-            sudo mv -f /tmp/config.json$$ /var/homebridge/config.json
-            sudo chown homebridge:homebridge /var/homebridge/config.json
+            sudo mv -f /tmp/config.json$$ /home/pi/.homebridge/config.json
+            sudo chown pi:pi /home/pi/.homebridge/config.json
             dialog --title "Homebridge configure" --backtitle "Homebridge configurator" \
             --stdout --msgbox "Configuration saved!" 5 50
         else
@@ -65,7 +65,7 @@ function menu_plugins()
 {
 choose=$(dialog --title "Homebridge plugins installer" --backtitle "Homebridge configuration tool by @macnow - Plugins Installer" \
 --stdout --no-cancel --menu "" 13 50 17 \
-1 "Belkin WeMo Platform" \
+1 "Harmony Hub" \
 2 "Orvibo Smart Socket Platform" \
 3 "TPLink HS100/HS110 WiFi Smart Plug" \
 4 "SONY BRAVIA TV" \
@@ -76,7 +76,7 @@ if [[ $output != "" || $output == "" ]]
 then
     if [[ $choose -eq 1 ]]
     then
-        menu_plugin homebridge-platform-wemo
+        menu_plugin homebridge-harmonyhub
     elif [[ $choose -eq 2 ]]
     then
         menu_plugin homebridge-platform-orvibo
@@ -110,9 +110,9 @@ then
 	dialog --title "$1" --backtitle "Homebridge configuration tool by @macnow - Plugins Installer - $1" \
         --stdout --infobox "Installing plugin...\nThis may take several minutes." 4 50
 	sudo npm install -g $1
-	scripts/config-merge.py /var/homebridge/config.json configs/$1.json > /tmp/config.json$$
-        sudo mv -f /tmp/config.json$$ /var/homebridge/config.json
-	sudo chown homebridge:homebridge /var/homebridge/config.json
+	scripts/config-merge.py /home/pi/.homebridge/config.json configs/$1.json > /tmp/config.json$$
+        sudo mv -f /tmp/config.json$$ /home/pi/.homebridge/config.json
+	sudo chown pi:pi /home/pi/.homebridge/config.json
 	dialog --title "$1" --backtitle "Homebridge configuration tool by @macnow - Plugins Installer - $1" \
         --stdout --msgbox "$1 plugin installed." 5 50
 	menu_plugins
