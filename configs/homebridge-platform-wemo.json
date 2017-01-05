@@ -1,10 +1,8 @@
 {
      "platforms": [
          {
-         "platform": "BelkinWeMo",
-         "name": "WeMo Platform",
-         "noMotionTimer": 60,
-         "ignoredDevices": []
+         "platform": "HarmonyHub",
+         "name": "Harmony Hub"
          }
      ]
 }
