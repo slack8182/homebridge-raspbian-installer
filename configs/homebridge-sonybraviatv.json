@@ -1,3 +1,4 @@
+{ 
   "accessories": [
     {
       "accessory": "SonyBraviaTV",
@@ -5,3 +6,5 @@
       "ipaddress": "10.0.1.5",
       "presharedkey": "0000"
     }
+  ]
+}
