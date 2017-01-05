@@ -1,6 +1,7 @@
-{
-    "accessory": "SonyBraviaTV",
-    "name": "My TV Name",
-    "ipaddress": "YOUR TV IP ADDRESS HERE",
-    "presharedkey": "YOUR PRESHARED KEY HERE"
- }
+  "accessories": [
+    {
+      "accessory": "SonyBraviaTV",
+      "name": "SonyTV",
+      "ipaddress": "10.0.1.5",
+      "presharedkey": "0000"
+    }
