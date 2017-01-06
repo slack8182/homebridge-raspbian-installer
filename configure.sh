@@ -48,7 +48,7 @@ function menu_configure()
         if [[ $JSON_OUTPUT -eq 0 ]]
         then
             sudo mv -f /tmp/config.json$$ /home/pi/.homebridge/config.json
-            sudo chown homebridge:homebridge /home/pi/.homebridge/config.json
+            sudo chown pi:pi /home/pi/.homebridge/config.json
             dialog \
               --title "Homebridge configure" \
               --backtitle "Homebridge configurator" \
@@ -128,7 +128,7 @@ function menu_plugin()
         sudo npm install -g $1
   	    scripts/config-merge.py /home/pi/.homebridge/config.json configs/$1.json > /tmp/config.json$$
         sudo mv -f /tmp/config.json$$ /home/pi/.homebridge/config.json
-  	    sudo chown homebridge:homebridge /home/pi/.homebridge/config.json
+  	    sudo chown pi:pi /home/pi/.homebridge/config.json
   	    dialog \
           --title "$1" \
           --backtitle "Homebridge configuration tool by @macnow - Plugins Installer - $1" \
