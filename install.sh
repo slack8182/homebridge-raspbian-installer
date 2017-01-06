@@ -6,9 +6,9 @@ sudo apt-get upgrade -y
 
 sudo apt-get install -y git make libavahi-compat-libdnssd-dev dialog
 
-wget https://nodejs.org/dist/v7.4.0/node-v7.4.0-linux-armv6l.tar.xz
-sudo tar -xf node-v7.4.0-linux-armv6l.tar.xz
-cd node-v7.4.0-linux-armv6l/
+wget https://nodejs.org/dist/v7.4.0/node-v7.4.0-linux-armv7l.tar.xz
+sudo tar -xf node-v7.4.0-linux-armv7l.tar.xz
+cd node-v7.4.0-linux-armv7l/
 sudo cp -R * /usr/local/
 cd
 mkdir ~/.npm-global
