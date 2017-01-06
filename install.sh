@@ -20,6 +20,11 @@ sudo node-gyp BUILDTYPE=Release rebuild
 cd -
 cd /etc/default && sudo wget https://www.dropbox.com/s/efhj7bll9yq5tgl/homebridge
 cd /etc/systemd/system && sudo wget https://www.dropbox.com/s/k610k1ens6ozsvb/homebridge.service
+cd
+mkdir .homebridge
+cd /home/pi/homebridge-raspbian-installer
+sudo cp configs/config.json /home/pi/.homebridge/config.json
+sudo chown -R pi:pi /home/pi/.homebridge/
 sudo systemctl daemon-reload
 sudo systemctl enable homebridge
 sudo systemctl start homebridge
