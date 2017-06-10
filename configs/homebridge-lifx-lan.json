@@ -1,7 +1,9 @@
 {
      "platforms": [
          {
-         "platform": "Orvibo"
+		"platform": "LifxLan",
+		"name": "LiFx"
+
          }
      ]
 }

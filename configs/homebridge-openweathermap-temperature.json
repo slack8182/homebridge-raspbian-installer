@@ -1,0 +1,9 @@
+{
+     "accessories": [
+         {
+         	"accessory": "OpenweathermapTemperature",
+        	"name": "Outside Temperature",
+        	"url": "http://api.openweathermap.org/data/2.5/weather?q=Charleston,WV&APPID=7b9087f290cefdf1a0a6a6eabdf57734"
+         }
+     ]
+}

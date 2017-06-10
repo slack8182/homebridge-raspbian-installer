@@ -1,0 +1,19 @@
+{
+     "platforms": [
+         {
+		"platform": "Camera-ffmpeg-omx",
+		"cameras": [{
+		"name": "KJ Cam",
+			"videoConfig": {
+			"source": "-re -i http://slack8181:steelers86@173.81.202.215:25112/videostream.cgi?",
+            		"stillImageSource": "-i http://slack8181:steelers86@173.81.202.215:25112/snapshot.cgi?",
+            		"maxStreams": 1,
+            		"maxWidth": 1280,
+            		"maxHeight": 720,
+            		"maxFPS": 30
+          }
+        }
+      ]
+   }
+  ]
+}

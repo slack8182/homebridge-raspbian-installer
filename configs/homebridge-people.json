@@ -1,0 +1,19 @@
+{
+     "platforms": [
+        {
+      "platform": "People",
+      "name": "People",
+      "people": [
+        {
+          "name": "Jeezy",
+          "target": "10.0.1.8"
+        },
+        {
+          "name": "CJ",
+          "target": "10.0.1.4"
+        }
+      ],
+      "threshold": 15
+    }
+   ]
+}

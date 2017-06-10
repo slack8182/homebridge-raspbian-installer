@@ -1,0 +1,13 @@
+{
+     "platforms": [
+         {
+		"platform": "MyQ",
+        	"name": "MyQ Platform",
+        	"user": "johnjackfert@gmail.com",
+        	"pass": "Slackfert81!",
+        	"brand": "Chamberlain",
+        	"ignoreDeviceWithoutDescription" : true 
+
+         }
+     ]
+}
